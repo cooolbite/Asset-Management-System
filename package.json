@@ -1,0 +1,53 @@
+{
+  "name": "asset-management-system",
+  "version": "1.0.0",
+  "description": "A full-stack asset management system built with Next.js, supporting hardware, software, and physical assets tracking",
+  "author": "cooolbite",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cooolbite/asset-management-system.git"
+  },
+  "keywords": [
+    "asset-management",
+    "nextjs",
+    "typescript",
+    "postgresql",
+    "inventory",
+    "asset-tracking"
+  ],
+  "scripts": {
+    "dev": "env-cmd -f .env.local next dev",
+    "build": "next build",
+    "start": "env-cmd -f .env.local next start",
+    "lint": "next lint",
+    "create-admin": "node scripts/create-admin.js",
+    "test-db": "node scripts/test-db-connection.js",
+    "setup-db": "node scripts/setup-database.js",
+    "run-schema": "node scripts/run-schema.js",
+    "add-vendors": "node scripts/add-vendors-table.js"
+  },
+  "dependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/node": "^20.8.0",
+    "@types/pg": "^8.10.9",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.6.1",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.561.0",
+    "next": "^14.0.0",
+    "pg": "^8.11.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.2.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "env-cmd": "^11.0.0",
+    "eslint": "^8.51.0",
+    "eslint-config-next": "^14.0.0"
+  }
+}

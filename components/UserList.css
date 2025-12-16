@@ -1,0 +1,143 @@
+.user-list-container {
+  width: 100%;
+}
+
+.page-actions {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-filter-section {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.search-form {
+  width: 100%;
+}
+
+.search-input-group {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto auto;
+  gap: 1rem;
+  align-items: end;
+}
+
+.users-table-container {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.users-table thead {
+  background-color: #f8f9fa;
+}
+
+.users-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #495057;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.users-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  color: #333;
+}
+
+.users-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.no-data {
+  text-align: center;
+  color: #6c757d;
+  padding: 2rem !important;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.status-active {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-inactive {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pagination span {
+  color: #495057;
+}
+
+.loading-state {
+  text-align: center;
+  padding: 3rem;
+  color: #6c757d;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@media (max-width: 1024px) {
+  .search-input-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .users-table-container {
+    overflow-x: scroll;
+  }
+
+  .users-table {
+    min-width: 800px;
+  }
+}
+
