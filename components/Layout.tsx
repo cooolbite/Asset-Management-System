@@ -12,7 +12,20 @@ import {
   Box,
   FolderTree,
   MapPin,
-  Building2
+  Building2,
+  Wrench,
+  Computer,
+  Monitor,
+  Printer,
+  Network,
+  Package,
+  ClipboardList,
+  Calendar,
+  Globe,
+  FileText,
+  Settings,
+  ShoppingCart,
+  HardDrive
 } from 'lucide-react';
 import './Layout.css';
 
@@ -137,6 +150,113 @@ export default function Layout({ children }: LayoutProps) {
               <History size={20} />
               Transactions
             </a>
+            <div className="nav-divider">ระบบแจ้งซ่อม</div>
+            <a
+              href="/dashboard/repairs"
+              className={pathname?.startsWith('/dashboard/repairs') ? 'active' : ''}
+            >
+              <Wrench size={20} />
+              แจ้งซ่อม
+            </a>
+            <div className="nav-divider">อุปกรณ์</div>
+            <a
+              href="/dashboard/equipment"
+              className={pathname?.startsWith('/dashboard/equipment') ? 'active' : ''}
+            >
+              <HardDrive size={20} />
+              อุปกรณ์ทั่วไป
+            </a>
+            <a
+              href="/dashboard/computers"
+              className={pathname?.startsWith('/dashboard/computers') ? 'active' : ''}
+            >
+              <Computer size={20} />
+              คอมพิวเตอร์
+            </a>
+            <a
+              href="/dashboard/monitors"
+              className={pathname?.startsWith('/dashboard/monitors') ? 'active' : ''}
+            >
+              <Monitor size={20} />
+              จอภาพ
+            </a>
+            <a
+              href="/dashboard/printers"
+              className={pathname?.startsWith('/dashboard/printers') ? 'active' : ''}
+            >
+              <Printer size={20} />
+              เครื่องพิมพ์
+            </a>
+            <a
+              href="/dashboard/network-devices"
+              className={pathname?.startsWith('/dashboard/network-devices') ? 'active' : ''}
+            >
+              <Network size={20} />
+              อุปกรณ์เครือข่าย
+            </a>
+            <div className="nav-divider">คลัง</div>
+            <a
+              href="/dashboard/spare-parts"
+              className={pathname?.startsWith('/dashboard/spare-parts') ? 'active' : ''}
+            >
+              <Package size={20} />
+              อะไหล่
+            </a>
+            <a
+              href="/dashboard/cartridges"
+              className={pathname?.startsWith('/dashboard/cartridges') ? 'active' : ''}
+            >
+              <ShoppingCart size={20} />
+              ตลับหมึก
+            </a>
+            <div className="nav-divider">การจัดการ</div>
+            <a
+              href="/dashboard/borrow-requests"
+              className={pathname?.startsWith('/dashboard/borrow-requests') ? 'active' : ''}
+            >
+              <ClipboardList size={20} />
+              ยืม-คืนอุปกรณ์
+            </a>
+            <a
+              href="/dashboard/pm"
+              className={pathname?.startsWith('/dashboard/pm') ? 'active' : ''}
+            >
+              <Calendar size={20} />
+              บำรุงรักษา (PM)
+            </a>
+            {user?.role === 'Admin' && (
+              <>
+                <div className="nav-divider">ระบบ</div>
+                <a
+                  href="/dashboard/domains"
+                  className={pathname?.startsWith('/dashboard/domains') ? 'active' : ''}
+                >
+                  <Globe size={20} />
+                  โดเมน
+                </a>
+                <a
+                  href="/dashboard/software"
+                  className={pathname?.startsWith('/dashboard/software') ? 'active' : ''}
+                >
+                  <FileText size={20} />
+                  ซอฟต์แวร์
+                </a>
+                <a
+                  href="/dashboard/contracts"
+                  className={pathname?.startsWith('/dashboard/contracts') ? 'active' : ''}
+                >
+                  <FileText size={20} />
+                  สัญญา
+                </a>
+                <a
+                  href="/dashboard/settings"
+                  className={pathname?.startsWith('/dashboard/settings') ? 'active' : ''}
+                >
+                  <Settings size={20} />
+                  ตั้งค่าระบบ
+                </a>
+              </>
+            )}
           </nav>
         </aside>
 

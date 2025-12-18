@@ -101,6 +101,15 @@
   color: var(--primary);
 }
 
+.nav-divider {
+  margin: 0.75rem 1rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 .main-content {
   flex: 1;
   padding: 2rem;

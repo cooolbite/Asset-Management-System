@@ -25,7 +25,8 @@
     "test-db": "node scripts/test-db-connection.js",
     "setup-db": "node scripts/setup-database.js",
     "run-schema": "node scripts/run-schema.js",
-    "add-vendors": "node scripts/add-vendors-table.js"
+    "add-vendors": "node scripts/add-vendors-table.js",
+    "run-extended-schema": "node scripts/run-extended-schema.js"
   },
   "dependencies": {
     "@types/bcryptjs": "^2.4.6",
